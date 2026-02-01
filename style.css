@@ -1,0 +1,28 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overscroll-behavior: none;
+  background: black;
+}
+
+body {
+  overflow: hidden;
+  position: fixed;
+}
+
+body.ready {
+  overflow-y: auto;
+}
+
+#openingVideo {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  transition: opacity 20s ease-in;
+}
+
+#openingVideo.fade-out {
+  opacity: 0;
+}
