@@ -28,16 +28,20 @@ body.ready {
   background-image: url("background.jpg");
   background-size: cover;
   background-position: center;
-  filter: blur(10px);
+  transition: filter 1.5s ease-out;
   transform: scale(1.1);
   z-index: -1
+}
+
+.background.unblurred::before {
+  filter: blur(4px);
 }
 
 #openingVideo {
   width: 100vw;
   height: 100vh;
   object-fit: cover;
-  transition: opacity 1.5s ease-out;
+  transition: opacity 1s ease-out;
 }
 
 #openingVideo.fade-out {
