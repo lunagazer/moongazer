@@ -34,7 +34,7 @@ body.ready {
 }
 
 .background.unblurred::before {
-  filter: blur(4px);
+  filter: blur(2px);
 }
 
 #openingVideo {
