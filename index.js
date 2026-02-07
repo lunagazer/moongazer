@@ -1,20 +1,16 @@
 const video = document.getElementById("openingVideo");
 const popup = document.getElementById("popup");
-const closeBtn = document.getElementById("closePopup");
+const enterBtn = document.getElementById("enter");
 
-popup.style.display = "flex";
-document.body.classList.add("popup-active");
-
-closeBtn.addEventListener("click", () => {
+enterBtn.addEventListener("click", () => {
   popup.style.display = "none";
-  document.body.classList.remove("popup-active");
   video.play();
 });
 
 video.addEventListener("ended", () => {
   document.body.classList.add("ready");
   setTimeout(() => {
-    document.querySelector(".background").classList.add("unblurred");
+    document.querySelector(".background").classList.add("blur");
   }, 400);
 });
 
@@ -24,8 +20,10 @@ video.addEventListener("transitionend", (e) => {
   }
 });
 
+let faded = false;
 video.addEventListener("timeupdate", () => {
-  if (video.currentTime >= video.duration - 0.10) {
+  if (!faded && video.currentTime >= video.duration - 0.1) {
+    faded = true;
     video.classList.add("fade-out");
   }
 });
