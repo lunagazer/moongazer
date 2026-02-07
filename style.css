@@ -72,10 +72,10 @@ body.ready {
   position: absolute;
   inset: 0;
   border-radius: inherit;
-  opacity: 0.8;
-  border: 2px solid blue;
+  border: 2px solid transparent;
+  background: linear-gradient(white, white) padding-box, linear-gradient(to right, #54d7f2, #dc2f7e) border-box;
   animation: pulse 1.5s ease-out infinite;
-  animation-delay: calc(0.5s * var(--i));
+  animation-delay: calc(-1s * var(--i));
 }
 
 @keyframes pulse {
