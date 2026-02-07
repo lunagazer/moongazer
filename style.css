@@ -73,7 +73,7 @@ body.ready {
   inset: 0;
   border-radius: inherit;
   border: 2px solid transparent;
-  background: linear-gradient(white, white) padding-box, linear-gradient(to right, #54d7f2, #dc2f7e) border-box;
+  background: linear-gradient(white, white) padding-box, conic-gradient(from 315deg, #54d7f2, #dc2f7e, #54d7f2) border-box;
   animation: pulse 1.5s ease-out infinite;
   animation-delay: calc(-1s * var(--i));
 }
