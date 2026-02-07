@@ -28,7 +28,6 @@ body.ready {
   background-size: cover;
   background-position: center;
   transition: filter 1.5s ease-out;
-  transform: scale(1.1);
 }
 
 .background.blur::before {
@@ -60,10 +59,10 @@ body.ready {
 
 #enter {
   position: relative;
-  width: 30px;
-  height: 30px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
-  background: transparent;
+  background: none;
   border: none;
   z-index: 1;
   overflow: visible;
@@ -72,38 +71,16 @@ body.ready {
 #enter span {
   position: absolute;
   inset: 0;
-  border-radius: 50%;
-  border: 1px solid blue;
-  animation: ripple 2s infinite;
+  border-radius: inherit;
+  opacity: 0.8;
+  border: 2px solid blue;
+  animation: pulse 1.5s ease-out infinite;
+  animation-delay: calc(0.5s * var(--i));
 }
 
-#enter span:nth-child(1) { animation-delay: 0s; }
-#enter span:nth-child(2) { animation-delay: 0.4s; }
-#enter span:nth-child(3) { animation-delay: 0.8s; }
-#enter span:nth-child(4) { animation-delay: 1.2s; }
-
-#enter::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: 50%;
-  border: 1px solid blue;
-  animation: ripple 2s infinite;
-}
-
-@keyframes ripple {
-  0% {
-    transform: scale(1);
-  }
-  40% {
-    transform: scale(1.5);
-    opacity: 0.8
-  }
-  80% {
-    transform: scale(2.2);
-    opacity: 0.5
-  }
+@keyframes pulse {
   100% {
     opacity: 0;
+    transform: scale(2);
   }
 }
