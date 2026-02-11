@@ -4,9 +4,12 @@ const enterBtn = document.getElementById("enter");
 const audio = document.getElementById("audio");
 
 enterBtn.addEventListener("click", () => {
-  audio.play();
   popup.style.display = "none";
   video.play();
+});
+
+video.addEventListener("started", () => {
+  audio.play();
 });
 
 video.addEventListener("ended", () => {
