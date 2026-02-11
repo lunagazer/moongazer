@@ -1,8 +1,10 @@
 const video = document.getElementById("openingVideo");
 const popup = document.getElementById("popup");
 const enterBtn = document.getElementById("enter");
+const audio = document.getElementById("audio");
 
 enterBtn.addEventListener("click", () => {
+  audio.play();
   popup.style.display = "none";
   video.play();
 });
