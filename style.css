@@ -27,11 +27,11 @@ body.ready {
   background-image: url("background.jpg");
   background-size: cover;
   background-position: center;
-  transition: filter 1.5s ease-out;
+  transition: filter 1.5s linear;
 }
 
 .background.blur::before {
-  filter: blur(2px);
+  filter: blur(3px);
 }
 
 #openingVideo {
@@ -74,7 +74,7 @@ body.ready {
   border-radius: inherit;
   border: 2px solid transparent;
   background: linear-gradient(white, white) padding-box, conic-gradient(from 315deg, #54d7f2, #dc2f7e, #54d7f2) border-box;
-  animation: pulse 1.5s ease-out infinite;
+  animation: pulse 1.5s linear infinite;
   animation-delay: calc(-1s * var(--i));
 }
 
