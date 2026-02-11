@@ -8,7 +8,7 @@ enterBtn.addEventListener("click", () => {
   video.play();
 });
 
-video.addEventListener("started", () => {
+video.addEventListener("playing", () => {
   audio.play();
 });
 
