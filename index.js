@@ -2,6 +2,7 @@ const video = document.getElementById("openingVideo");
 const popup = document.getElementById("popup");
 const enterBtn = document.getElementById("enter");
 const audio = document.getElementById("audio");
+const ost = document.getElementById("ost");
 
 enterBtn.addEventListener("click", () => {
   popup.style.display = "none";
@@ -30,5 +31,6 @@ video.addEventListener("timeupdate", () => {
   if (!faded && video.currentTime >= video.duration - 0.1) {
     faded = true;
     video.classList.add("fade-out");
+    ost.play();
   }
 });
