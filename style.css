@@ -14,6 +14,11 @@ body.ready {
   overflow-y: auto;
 }
 
+@font-face {
+  font-family: 'SymbolsNerdFont';
+  src: url('SymbolsNerdFont-Regular.woff2') format('woff2');
+}
+
 .background {
   position: relative;
   height: 100vh;
@@ -87,19 +92,15 @@ body.ready {
 
 .moonphase {
   position: relative;
-  width: 200px;
-  height: 200px;
-  margin: 50px auto;
+  width: 100vw;
+  height: 100vh;
+  left: 50%;
 }
 
 .moonphase span {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform:
-  rotate(calc(var(--i) * 72deg))
-  translate(80px)
-  rotate(calc(var(--i) * -72deg));
-  transform-origin: 0 0;
-  font-size: 24px;
+  transform: rotate(calc(var(--i) * 45deg)) translate(50vh) rotate(calc(var(--i) * 315deg));
+  font-size: 50px;
+  font-family: 'SymbolsNerdFont';
+  color: red;
 }
