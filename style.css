@@ -95,6 +95,7 @@ body.ready {
   width: 100vw;
   height: 100vh;
   left: 50%;
+  bottom: 100%;
 }
 
 .moonphase span {
