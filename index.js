@@ -4,9 +4,9 @@ const enterBtn = document.getElementById("enter");
 const audio = document.getElementById("audio");
 const ost = document.getElementById("ost");
 
-enterBtn.addEventListener("click", async () => {
+enterBtn.addEventListener("click", () => {
   popup.remove();
-  await video.play();
+  video.play();
 });
 
 video.addEventListener("playing", () => {
