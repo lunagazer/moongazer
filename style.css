@@ -1,7 +1,5 @@
 html, body {
   margin: 0;
-  padding: 0;
-  width: 100%;
   height: 100%;
   overscroll-behavior: none;
   overflow: hidden;
@@ -14,7 +12,7 @@ html, body {
 
 .background {
   position: relative;
-  height: 100vh;
+  height: 100dvh;
   overflow: hidden;
 }
 
@@ -33,8 +31,8 @@ html, body {
 }
 
 #openingVideo {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   transition: opacity 1s ease-out;
   z-index: 1;
@@ -84,18 +82,16 @@ html, body {
 }
 
 .moonphase {
-  position: relative;
-  width: 100vw;
-  height: 100vh;
-  left: 50%;
-  bottom: 100%;
-  overscroll-behavior: none;
+  width: 100%;
+  height: 100dvh;
 }
 
 .moonphase span {
   position: absolute;
-  transform: rotate(calc(var(--i) * 45deg)) translate(50vw) rotate(calc(var(--i) * 315deg));
+  transform: rotate(calc(var(--i) * 45deg)) translate(50dvw) rotate(calc(var(--i) * 315deg));
   font-size: 50px;
   font-family: 'SymbolsNerdFont';
   color: red;
+  top: 0;
+  left: 50%;
 }
