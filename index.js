@@ -14,7 +14,6 @@ video.addEventListener("playing", () => {
 });
 
 video.addEventListener("ended", () => {
-  document.body.classList.add("ready");
   setTimeout(() => {
     document.querySelector(".background").classList.add("blur");
   }, 400);

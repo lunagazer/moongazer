@@ -4,14 +4,7 @@ html, body {
   width: 100%;
   height: 100%;
   overscroll-behavior: none;
-}
-
-body {
   overflow: hidden;
-}
-
-body.ready {
-  overflow-y: auto;
 }
 
 @font-face {
@@ -96,6 +89,7 @@ body.ready {
   height: 100vh;
   left: 50%;
   bottom: 100%;
+  overscroll-behavior: none;
 }
 
 .moonphase span {
