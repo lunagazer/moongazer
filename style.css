@@ -100,7 +100,7 @@ body.ready {
 
 .moonphase span {
   position: absolute;
-  transform: rotate(calc(var(--i) * 45deg)) translate(50vh) rotate(calc(var(--i) * 315deg));
+  transform: rotate(calc(var(--i) * 45deg)) translate(50vw) rotate(calc(var(--i) * 315deg));
   font-size: 50px;
   font-family: 'SymbolsNerdFont';
   color: red;
